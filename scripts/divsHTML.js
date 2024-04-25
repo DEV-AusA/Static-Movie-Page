@@ -179,8 +179,6 @@ const newCardTrHTML = (object) =>{
 const newCardBannerSugeHTML = (object) => {
 
     const {id, poster, title, year, director, duration, rate} = object;
-
-    console.log(id);
     
     const divCardBannerSuge = document.createElement('div');
     divCardBannerSuge.classList.add('movie-preview');
