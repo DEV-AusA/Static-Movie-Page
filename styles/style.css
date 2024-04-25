@@ -99,6 +99,11 @@
     min-height: 475px;
 }
 
+.modal-header{
+    background-color: #d00000 !important;
+    color: white;
+}
+
 .footer-index{
     background-color: #d00000;
 }
