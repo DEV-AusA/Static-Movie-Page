@@ -15,13 +15,20 @@
     background-color: #d00000;
     border-color: white;
 }
+
 .nav-tabs{
     transition: 700ms;
 }
+
 .nav-tabs:hover {
     background-color: black;
     transition: 700ms;
 }
+
+.item-navbar{
+    font-size: 1.2rem !important;
+}
+
 .item-navbar:hover{
     background-color: #d00000 !important;
 }
@@ -40,7 +47,7 @@
     transition: 300ms;
 }
 .logo-play img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 300ms;
 }
 .input{
@@ -369,6 +376,10 @@
 }
 
 @media screen and (max-width: 1280px){
+
+    .item-navbar{
+        font-size: 0.8rem !important;
+    }
     .card-movie{
         min-width: 75%;
         min-height: 75%;
@@ -388,8 +399,6 @@
 
 /* RESPONSIVE */
 @media screen and (max-width:430px) {
-
-    /* index.html*/
 
     .description{
         display: none;
