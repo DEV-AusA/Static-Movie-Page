@@ -24,63 +24,57 @@
     <header class="header">
 
         <div class="navbar navbar-expand-lg nav-tabs pb-0">
-            <div class="col-12 container-fluid justify-content-center">
-
-                <ul id="nav-home-btns" class="nav m-0 p-0 col-12">
-                    <div class="nav col-2 m-0 p-0 container-fluid justify-content-start align-items-end">
-                        <li class="nav-item">
-                            <a href="#" aria-label="Sigueme en mi Instagram"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/ig.png" alt=""></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" aria-label="Unete a mi canal de youtube y diviertete con mis videos"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/yt.png" alt=""></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://github.com/DEV-AusA?tab=repositories" target="_blank" aria-label="Deleitate con mis proyectos"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/git.png" alt=""></a>
-                        </li> 
-                        <li class="nav-item">
-                            <a href="#" aria-label="Visita mi perfil en Linkedin"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/lin.png" alt=""></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" aria-label="Comunicate conmigo y mandame un mensaje por Whatsapp"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/whats.png" alt=""></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://github.com/DEV-AusA?tab=repositories" target="_blank" aria-label="Riete conmigo compartiendo experiencias en Tiktok"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/tik-tok.png" alt=""></a>
-                        </li>
-                    </div>
+            <div class="container-fluid justify-content-xl-center justify-content-center">
+                
+                <a href="https://www.linkedin.com/in/dev-ausa/" target="_blank" aria-label="Sigueme en mi Instagram"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/ig.png" alt=""></a>
+                <a href="https://github.com/DEV-AusA" target="_blank" aria-label="Unete a mi canal de youtube y diviertete con mis videos"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/yt.png" alt=""></a>
+                <a href="https://github.com/DEV-AusA" target="_blank" aria-label="Deleitate con mis proyectos"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/git.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/dev-ausa/" target="_blank" aria-label="Visita mi perfil en Linkedin"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/lin.png" alt=""></a>
+                <a href="https://github.com/DEV-AusA" target="_blank" aria-label="Comunicate conmigo y mandame un mensaje por Whatsapp"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/whats.png" alt=""></a>
+                <a href="https://github.com/DEV-AusA" target="_blank" aria-label="Riete conmigo compartiendo experiencias en Tiktok"><img class="iconos p-2 pb-2 nav-link" src="./assets/img/icons/tik-tok.png" alt=""></a>
+                
+                <div id="navbarSupportedContent" class="navbar-collapse collapse">
                     
-                    <div class="nav col-1 logo-play justify-content-end">
-                        <a href="./index.html"><img src="./assets/img/icons/+PLAY.png" alt=""></a>
+                    <div class="logo-play d-flex mx-lg-auto m-1 justify-content-center">
+                        <a href="./index.html" class=""><img src="./assets/img/icons/+PLAY.png" alt=""></a>
                     </div>
-                    <form class="col-3 d-flex mb-2 justify-content-center" role="search">
-                        <input class="input col-8 rounded-0 me-0" type="search" placeholder="¿Que quieres ver hoy?" aria-label="Search">
-                        <button class="btn rounded-0 btn-dark" type="submit">Go!</button>
-                    </form>
-                    <div class="nav col-4  justify-content-start align-items-end">
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 fs-5" href="./index.html">Principal</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 fs-5" href="#estrenos">Estrenos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 fs-5" href="./topRank.html">Top Ranking</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 fs-5" href="#">Sugerencia de la casa</a>
-                        </li>                       
+                    <div class="w-25 mx-auto">
+                        <form class="d-flex mx-auto justify-content-center" role="search">
+                            <input class="input col-sm-10 rounded-0 me-0" type="search" placeholder="¿Que quieres ver hoy?" aria-label="Search">
+                            <button class="btn rounded-0 btn-dark" type="submit">Go!</button>
+                        </form>
                     </div>
-                    <div class="nav col-2 justify-content-end d-flex">
+
+                    <ul id="nav-home-btns" class="navbar-nav m-auto mb-2 mb-lg-0">                        
                         <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext" type="button" data-bs-toggle="modal" data-bs-target="#registerUserModal">Registrate</a>
+                            <a class="nav-link text-decoration-none text-white p-2 fs-5 bg item-navbar" href="./index.html">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none text-white p-2 fs-5 item-navbar" href="#estrenos">Estrenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none text-white p-2 fs-5 item-navbar" href="./topRank.html">Top Ranking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none text-white p-2 fs-5 item-navbar" href="#">Sugerencia de la casa</a>
+                        </li>     
+                    </ul>
+                    <ul id="nav-home-btns" class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext item-navbar" type="button" data-bs-toggle="modal" data-bs-target="#registerUserModal">Registrate</a>
                         </li>    
                         <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext" type="button" data-bs-toggle="modal" data-bs-target="#loginUserModal">Login</a>
-                        </li> 
+                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext item-navbar" type="button" data-bs-toggle="modal" data-bs-target="#loginUserModal">Login</a>
+                        </li>                 
                         <li class="nav-item">
-                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext" href="./aboutme.html">Sobre mi</a>
-                        </li>                           
-                    </div>     
-                </ul>
+                            <a class="nav-link text-decoration-none text-white p-2 pb-3 boton-home-ext item-navbar" href="./aboutme.html">Sobre mi</a>
+                        </li>                         
+                    </ul>
+                    
+                </div>
+                <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
 
             </div>
         </div>

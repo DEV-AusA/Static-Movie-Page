@@ -22,6 +22,9 @@
     background-color: black;
     transition: 700ms;
 }
+.item-navbar:hover{
+    background-color: #d00000 !important;
+}
 .iconos{
 	width: 40px;
     transition: 200ms;
@@ -97,6 +100,14 @@
 }
 .banner-img{
     min-height: 475px;
+}
+.card-text-vw{
+    font-size: 0.7vw
+}
+
+.fixed-height {
+    min-height: 600px;
+    height: auto;
 }
 
 .modal-header{
@@ -357,8 +368,35 @@
     transition: 400ms;
 }
 
+@media screen and (max-width: 1280px){
+    .card-movie{
+        min-width: 75%;
+        min-height: 75%;
+    }
+    .card-text-vw{
+        font-size: 1.5vw
+    }
+}
+@media screen and (max-width: 750px){
+    .description{
+        display: none;
+    }
+    .card-text-vw{
+        font-size: 2vw
+    }
+}
+
 /* RESPONSIVE */
 @media screen and (max-width:430px) {
+
+    /* index.html*/
+
+    .description{
+        display: none;
+    }
+    .card-text-vw{
+        font-size: 4vw
+    }
 
     /* HEADER */
     header{
