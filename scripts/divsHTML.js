@@ -149,7 +149,7 @@ const newCardTrHTML = (object) =>{
     const {id, poster, title, year, rate} = object;
 
     const cardModieTr = document.createElement('div');
-    cardModieTr.classList.add('col-2', 'card', 'mt-3', 'mx-2', 'p-0', 'pb-2', 'shadow', 'card-movie');
+    cardModieTr.classList.add('card', 'col-lg-2', 'col-md-3', 'col-sm-4', 'mt-3', 'mx-2', 'p-0', 'pb-2', 'shadow', 'card-movie');
     cardModieTr.id = `card-tr-${id}`;
 
     const divCarTr = `
@@ -189,34 +189,32 @@ const newCardBannerSugeHTML = (object) => {
 
     if (id % 2 === 1) {
         cardBannerSuge = `
-    <div class="container-fluid row p-0 m-0 container-card-bg position-relative">                
-                <div class="col-4 ps-5 d-flex align-items-center z-1">
-                    <div class="card-movie">
-                        <div class="card mb-3 mx-auto d-block shadow-lg bg-dark bg-opacity-50">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img class="img-fluid rounded-start" src="${poster}" alt="${title}">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body text-white pb-0">
-                                        <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
-                                        <div class="row align-items-center">
-                                            <div class="col-8">
-                                                <h6 class="m-0 fw-bolder">Release date:</h6>
-                                                <p class="card-text">${year}</p>
-                                                <h6 class="m-0 fw-bolder">Duration:</h6>
-                                                <small>${duration}</small>
-                                                <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
-                                                <p class="card-text">${director}</p>
-                                            </div>
+        <div class="container-fluid row p-0 m-0 container-card-bg position-relative">                
+            <div class="col-lg-4 ps-lg-5 mt-1 d-flex align-items-center z-1">
+                <div class="card-movie">
+                    <div class="card mb-3 mx-auto d-block shadow-lg bg-light bg-opacity-50">
+                        <div class="row g-0">
+                            <div class="col-lg-4 col-md-4 d-inline-flex justify-content-center">
+                                <img class="img-fluid rounded-2" src="${poster}" alt="${title}">
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <div class="card-body text-white pb-0">
+                                    <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-8">
+                                            <h6 class="m-0 fw-bolder">Release date:</h6>
+                                            <p class="card-text">${year}</p>
+                                            <h6 class="m-0 fw-bolder">Duration:</h6>
+                                            <small>${duration}</small>
+                                            <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
+                                            <p class="card-text">${director}</p>
+                                        </div>
 
-                                            <div class="col-4 text-center">
-                                                <h2 class="card-title">Rate</h2>
-                                                <div class="d-inline-flex justify-content-center">
-                                                    <div
-                                                        class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
-                                                        <h3 class="card-text">${rate}</h3>
-                                                    </div>
+                                        <div class="col-lg-4 text-center">
+                                            <h2 class="card-title">Rate</h2>
+                                            <div class="d-inline-flex justify-content-center rate-adjust">
+                                                <div class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
+                                                    <h3 class="card-text">${rate}</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -226,48 +224,47 @@ const newCardBannerSugeHTML = (object) => {
                         </div>
                     </div>
                 </div>
-                <div class="col-8 p-0 video-banner-l z-0 banner-img img-carousel-${id}">
-                    <div id="banner-${id}" class="w-100 h-100 img-fluid">
-                    </div>
+            </div>
+            <div class="col-lg-8 p-0 z-0 banner-img img-carousel-${id}">
+                <div id="banner-${id}" class="w-100 h-100 img-fluid">
                 </div>
             </div>
+        </div>
     
     `;
     
     } else {
         cardBannerSuge = `
-    <div class="container-fluid row p-0 m-0 container-card-bg position-relative">
-                <div class="col-8 p-0 video-banner-r z-0 banner-img img-carousel-${id}">
-                    <div id="banner-${id}" class="w-100 h-100 img-fluid">
-                    </div>
-                </div>                
-                <div class="col-4 ps-5 d-flex align-items-center z-1">
-                    <div class="card-movie">
-                        <div class="card mb-3 mx-auto d-block shadow-lg bg-dark bg-opacity-50">
-                            <div class="row g-0">
-                                <div class="col-4">
-                                    <img class="img-fluid rounded-start" src="${poster}" alt="${title}">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body text-white pb-0">
-                                        <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
-                                        <div class="row align-items-center">
-                                            <div class="col-8">
-                                                <h6 class="m-0 fw-bolder">Release date:</h6>
-                                                <p class="card-text">${year}</p>
-                                                <h6 class="m-0 fw-bolder">Duration:</h6>
-                                                <small>${duration}</small>
-                                                <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
-                                                <p class="card-text">${director}</p>
-                                            </div>
+        <div class="container-fluid row p-0 m-0 container-card-bg position-relative">
+            <div class="col-lg-8 p-0 z-0 banner-img img-carousel-${id}">
+                <div id="banner-${id}" class="w-100 h-100 img-fluid">
+                </div>
+            </div>                
+            <div class="col-lg-4 ps-lg-5 mt-1 d-flex align-items-center z-1">
+                <div class="card-movie">
+                    <div class="card mb-3 mx-auto d-block shadow-lg bg-light bg-opacity-50">
+                        <div class="row g-0">
+                            <div class="col-lg-4 col-md-4 d-inline-flex justify-content-center">
+                                <img class="img-fluid rounded-start" src="${poster}" alt="${title}">
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <div class="card-body text-white pb-0">
+                                    <h3 class="card-title fw-bold m-0 mb-4">${title}</h3>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-8">
+                                            <h6 class="m-0 fw-bolder">Release date:</h6>
+                                            <p class="card-text">${year}</p>
+                                            <h6 class="m-0 fw-bolder">Duration:</h6>
+                                            <small>${duration}</small>
+                                            <h6 class="card-title mt-3 mb-0 fw-bolder">Director</h6>
+                                            <p class="card-text">${director}</p>
+                                        </div>
 
-                                            <div class="col-4 text-center">
-                                                <h2 class="card-title">Rate</h2>
-                                                <div class="d-inline-flex justify-content-center">
-                                                    <div
-                                                        class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
-                                                        <h3 class="card-text">${rate}</h3>
-                                                    </div>
+                                        <div class="col-lg-4 text-center">
+                                            <h2 class="card-title">Rate</h2>
+                                            <div class="d-inline-flex justify-content-center rate-adjust">
+                                                <div class="d-flex justify-content-center align-items-center bg-warning bg-opacity-25 border border-warning rounded-bottom rate">
+                                                    <h3 class="card-text">${rate}</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -276,8 +273,9 @@ const newCardBannerSugeHTML = (object) => {
                             </div>
                         </div>
                     </div>
-                </div>                
-            </div>
+                </div>
+            </div>                
+        </div>
     
     `;
     }
