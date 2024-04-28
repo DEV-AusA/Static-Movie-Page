@@ -17,7 +17,9 @@ const newContainerBannerHTML = (object) => {
                     <div class="mb-3 d-block shadow-lg bg-dark bg-opacity-50">
                         <div class="row g-0">
                             <div class="col-md-4 d-flex justify-content-center">
-                                <img class="img-fluid rounded-1" src="${poster}" alt="${title}">
+                                <a href="#card-${id}">
+                                    <img class="img-fluid rounded-1" src="${poster}" alt="${title}">
+                                </a>
                             </div>                         
                             <div class="col-md-8 description">
                                 <div class="card-body text-white pb-0">
@@ -82,7 +84,9 @@ const newContainerBannerHTML = (object) => {
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex justify-content-center">
+                                <a href="#card-${id}">
                                 <img class="img-fluid rounded-1" src="${poster}" alt="${title}">
+                                </a>
                             </div> 
                         </div>
                     </div>
@@ -123,7 +127,7 @@ const newContainerMainHTML = (object) =>{
                             </div>
                             <div class="col-3 text-center">
                                 <h2 class="card-title">Rate</h2>
-                                <div class="d-inline-flex justify-content-center">
+                                <div class="d-inline-flex justify-content-center rate-adjust">
                                     <div class="d-flex justify-content-center align-items-center rounded-bottom rate">
                                         <h3 class="card-text card-text">${rate}</h3>
                                     </div>
