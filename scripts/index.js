@@ -76,6 +76,7 @@ estrenos = async () => {
             dataIndex.forEach((movie) => cargarCardBanner(movie));
             dataIndex.forEach((movie) => cargarCardMain(movie));
             rateColorMain(); 
+            buttonSendForm();
         }
         // topRank
         else if (document.getElementById('body-top-rank')) {
@@ -83,6 +84,7 @@ estrenos = async () => {
             rateColorTr();
             dataIndex.forEach((movie) => cargarCardMain(movie));
             rateColorMain();
+            buttonSendForm();
         }
         // suge
         else if (document.getElementById('body-suge')) {
@@ -93,6 +95,7 @@ estrenos = async () => {
             });
             dataIndex.forEach((movie) => cargarCardMain(movie));
             rateColorMain();
+            buttonSendForm();
         }
         
     } catch (error) {
@@ -101,7 +104,71 @@ estrenos = async () => {
         
     }
 };
+
+const cleanInputs = () => {
+
+    //limpiar intups
+    const inputsForm = document.querySelectorAll('.form-control');
+    inputsForm.forEach((input) => {
+        input.value = '';
+    });
+    // limpiar selects
+    const selectsForm = document.querySelectorAll('.form-select');
+    selectsForm.forEach((select) => {
+        select.selectedIndex = 0;
+    });
+    // desmarcar checkboxes
+    const checkboxesForm = document.querySelectorAll('.form-check-input');
+    checkboxesForm.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+};
+
+const validateForm = (event) => {
+
+    event.preventDefault(); // Evita el envio del formulario por defecto debido al button de type=submit
+    const form = document.querySelector('.needs-validation'); 
+    // Agregar la clase 'was-validated' al formulario
+    form.classList.add('was-validated'); 
+
+    // Verifico si el formulario cumple con ciertas condiciones enviar los datos
+    if (form.checkValidity() && form.querySelectorAll(':invalid').length === 0) {
+        
+        const email = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
+        const errorMessage = document.getElementById('error-message');
+
+        if (email === '' || password === '') {
+            errorMessage.textContent = 'Todos los campos son obligatorios.';
+            errorMessage.style.display = 'block';
+            return;
+        } else {
+             // cierro modal si todo esta ok
+             const loginModal = document.getElementById('loginUserModal');
+             let modal = bootstrap.Modal.getInstance(loginModal);
+             modal.hide();
+             alert('Login Correcto');
+
+             // redirigo
+             window.location.href = 'https://dev-ausa.github.io/Pagina-Peliculas-mas-Play';
+        }
+
+        // limpio inputs despues de enviar
+        cleanInputs();
+        //remuevo la clase was-validated
+        form.classList.remove('was-validated');
+        
+        // DATOS DE LOGIN
+        console.log({email, password});
+    }
+};
+
+const buttonSendForm = () =>{
+    const btnSendform = document.getElementById('send-button-form');
+    btnSendform.addEventListener('click', validateForm);
+    // con esto prevengo que el btn submit deje capturar el contenido de todos los inputs y evitar que no se capture el primero input
+};
+
 estrenos();
 bntsNavHoverActive();
-
 
