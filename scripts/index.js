@@ -150,7 +150,7 @@ const validateForm = (event) => {
              alert('Login Correcto');
 
              // redirigo
-             window.location.href = 'https://dev-ausa.github.io/Pagina-Peliculas-mas-Play';
+             window.location.href = 'https://dev-ausa.github.io/Static-Movie-Page';
         }
 
         // limpio inputs despues de enviar
